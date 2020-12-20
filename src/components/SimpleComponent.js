@@ -1,4 +1,3 @@
-// Code SimpleComponent Here
 import React from 'react';
 
 class SimpleComponent extends React.Component {
@@ -7,7 +6,9 @@ class SimpleComponent extends React.Component {
   }
 
   handleClick = () => {
-    this.state.mood === 'happy' ? this.setState({ mood: 'sad' }) : this.setState({ mood: 'happy' });
+    this.setState({
+      mood: this.state.mood === 'happy' ? 'sad' : 'happy'
+    });
   }
 
   render() {
